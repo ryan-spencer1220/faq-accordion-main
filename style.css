@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("/assets/fonts/WorkSans-VariableFont_wght.ttf");
+  font-weight: 400, 600, 700;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-gray-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+
+  --ff-base: "Work Sans", serif;
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-xtra-bold: 700;
+
+  --fs-regular: 0.95rem;
+  --fs-large: 2rem;
+}
+
+body {
+  background-color: var(--clr-light-pink);
+  font-family: var(--ff-base);
+  font-size: var(--fs-regular);
+  font-weight: var(--fs-regular);
+  color: var(--clr-dark-purple);
+  line-height: 1.4;
+  width: 100%;
+}
+
+picture {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  margin: -6rem 1.2rem 1.2rem 1.2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 1000;
+  position: relative;
+  max-width: 32rem;
+}
+
+h1 {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-xtra-bold);
+}
+
+h2 {
+  font-weight: var(--fw-bold);
+}
+
+p {
+  color: var(--clr-gray-purple);
+}
+
+.title-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.item-title-container {
+  display: grid;
+  grid-template-columns: 90% 1rem;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.star-icon {
+  width: 25px;
+  height: auto;
+}
+
+.plus-icon {
+  background-image: url(./assets/images/icon-plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.plus-icon.active {
+  background-image: url(./assets/images/icon-minus.svg);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--clr-light-pink);
+}
+
+/* Content styles */
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 15px;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+/* When active */
+.accordion-content.active {
+  max-height: 14rem;
+  opacity: 1;
+  padding: 15px 0px;
+}
