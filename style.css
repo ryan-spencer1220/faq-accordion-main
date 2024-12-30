@@ -81,7 +81,7 @@ p {
 }
 
 .star-icon {
-  width: 25px;
+  width: 2rem;
   height: auto;
 }
 
@@ -89,8 +89,8 @@ p {
   background-image: url(./assets/images/icon-plus.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 }
 
@@ -100,9 +100,8 @@ p {
 
 hr {
   display: block;
-  height: 1px;
   border: 0;
-  border-top: 1px solid var(--clr-light-pink);
+  border-top: 0.1rem solid var(--clr-light-pink);
 }
 
 /* Content styles */
@@ -110,7 +109,7 @@ hr {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  padding: 0 15px;
+  padding: 0 1rem;
   transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
 }
 
@@ -118,5 +117,5 @@ hr {
 .accordion-content.active {
   max-height: 14rem;
   opacity: 1;
-  padding: 15px 0px;
+  padding: 1rem 0;
 }
