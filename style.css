@@ -22,9 +22,15 @@ body {
   color: var(--clr-dark-purple);
   line-height: 1.4;
   width: 100%;
+  overflow-x: hidden;
 }
 
 picture {
+  width: 100%;
+  display: block;
+}
+
+picture img {
   width: 100%;
   height: auto;
 }
@@ -34,6 +40,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .card {
